@@ -19,8 +19,9 @@
             disabled:opacity-75
             disabled:bg-gray-100
             placeholder:text-gray-300
-            ${TwdRounded} ${showPassword && password ? 'pr-12' : ''}`" :disabled="disabled"
-            :required="required" :readonly="readonly" :placeholder="placeholder" v-model.trim="fieldValue" />
+            ${TwdRounded} ${showPassword && password ? 'pr-12' : ''}`" :disabled="disabled" :required="required"
+            :readonly="readonly" :placeholder="placeholder" v-model.trim="modelValue"
+        />
         <div class="px-2.5 w-12 text-sm absolute inset-y-0 right-0 flex justify-center items-center"
             v-if="showPassword && password">
             <svg class="w-4 h-4 stroke-black hover:cursor-pointer" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
@@ -43,7 +44,7 @@
 </template>
 
 <script setup>
-import { ref, getCurrentInstance, watch, useModel } from "vue";
+import { ref, getCurrentInstance, watch } from "vue";
 
 const props = defineProps({
     id: {
@@ -97,16 +98,11 @@ const props = defineProps({
     TwdSize: {
         type: String,
         default: 'w-auto'
-    },
-    modelValue: {
-        type: String,
-        default: ''
     }
 })
 
-const emit = defineEmits(['update:modelValue']);
+const modelValue = defineModel('modelValue', { local: true });
 
-const fieldValue = useModel(props, 'modelValue')
 const instance = getCurrentInstance();
 const uniqueId = ref(null);
 const mode = ref(props.password ? 'password' : 'text')
