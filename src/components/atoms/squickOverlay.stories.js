@@ -1,5 +1,5 @@
 import SquickOverlay from './squickOverlay.vue';
-import SquickButton from './SquickButton.vue';
+import SquickButton from './squickButton.vue';
 
 export default {
     title: 'Atoms/SquickOverlay',

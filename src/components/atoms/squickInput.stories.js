@@ -1,4 +1,4 @@
-import SquickInput from './SquickInput.vue';
+import SquickInput from './squickInput.vue';
 
 export default {
     title: 'Atoms/SquickInput',
@@ -13,6 +13,25 @@ export const base = {
         },
         template: '<SquickInput v-bind="args" />',
     }),
+    argTypes: {
+        TwdColor: {
+            control: 'text',
+        },
+    },
+};
+
+export const password = {
+    render: (args, argTypes) => ({
+        components: { SquickInput },
+        setup() {
+            return { args, argTypes };
+        },
+        template: '<SquickInput v-bind="args" />',
+    }),
+    args: {
+        password: true,
+        showPassword: true
+    },
     argTypes: {
         TwdColor: {
             control: 'text',
