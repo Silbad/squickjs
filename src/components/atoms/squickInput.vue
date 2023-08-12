@@ -1,7 +1,7 @@
 <template>
     <div :class="`relative inline-flex ${TwdWidth}`">
         <input :id="uniqueId" :name="name" :title="title" :type="mode" :class="`
-            transition-all
+            transition
             w-full
             block
             px-2.5

@@ -1,6 +1,6 @@
 <template>
     <button :id="uniqueId" :name="name" :title="title" :type="mode" :class="`
-        transition-all
+        transition
         flex justify-center items-center
         px-2.5
         py-1.5

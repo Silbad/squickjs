@@ -1,7 +1,7 @@
 <template>
     <div :class="`relative inline-flex ${TwdWidth}`">
         <textarea :id="uniqueId" :name="name" :title="title" :class="`
-            transition-all
+            transition
             w-full
             block
             px-2.5
@@ -35,11 +35,11 @@ const props = defineProps({
     },
     name: {
         type: String,
-        default: 'MyInput'
+        default: 'MyTextarea'
     },
     title: {
         type: String,
-        default: 'MyInput'
+        default: 'MyTextarea'
     },
     placeholder: {
         type: String,
@@ -79,5 +79,5 @@ const uniqueId = ref(null);
 // générer un ID unique par défaut
 uniqueId.value = props.id
     ? props.id
-    : "squick-input-" + instance.uid;
+    : "squick-textarea-" + instance.uid;
 </script>
