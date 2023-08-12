@@ -115,6 +115,7 @@ const tooglePassword = () => {
     mode.value = (mode.value === 'password') ? 'text' : 'password';
 }
 
+// générer un ID unique par défaut
 uniqueId.value = props.id
     ? props.id
     : "squick-input-" + instance.uid;

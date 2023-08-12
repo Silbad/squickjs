@@ -1,11 +1,12 @@
 <template>
-    <button :id="uniqueId" :name="name" :title="title" :class="`
+    <button :id="uniqueId" :name="name" :title="title" :type="mode" :class="`
         transition-all
         flex justify-center items-center
         px-2.5
         py-1.5
         text-sm
         shadow-sm
+        outline-none
         border
         border-gray-300
         bg-white
@@ -40,6 +41,10 @@ const props = defineProps({
         type: String,
         default: 'MyButton'
     },
+    mode: {
+        type: String,
+        default: 'button'
+    },
     disabled: {
         type: Boolean,
         default: false
@@ -61,6 +66,7 @@ const props = defineProps({
 const instance = getCurrentInstance();
 const uniqueId = ref(null);
 
+// générer un ID unique par défaut
 uniqueId.value = props.id
     ? props.id
     : "squick-button-" + instance.uid;

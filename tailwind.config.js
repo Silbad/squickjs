@@ -28,6 +28,12 @@ export default {
         {
             pattern: /rounded-+/
         },
+        {
+            pattern: /text-+/
+        },
+        {
+            pattern: /bg-+/
+        }
     ],
 }
 
