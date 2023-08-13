@@ -32,6 +32,12 @@ export default {
             pattern: /text-+/
         },
         {
+            pattern: /from-+/
+        },
+        {
+            pattern: /to-+/
+        },
+        {
             pattern: /bg-+/
         }
     ],
