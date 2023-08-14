@@ -1,5 +1,5 @@
 <template>
-    <div :class="`badgen transition flex flex-nowrap ${TwdRoundedLeft} ${TwdRoundedRight}`">
+    <div :class="`badgen transition inline-flex flex-nowrap shadow-sm ${TwdRoundedLeft} ${TwdRoundedRight}`">
         <div
             :class="`px-1.5 py-0.5 select-none bg-gradient-to-b from-gray-500 to-gray-700 text-white text-xs ${TwdRoundedLeft}`">
             <span class="flex justify-center items-center drop-shadow-[1px_1px_rgba(0,0,0,0.3)]">
@@ -7,7 +7,7 @@
             </span>
         </div>
         <div
-            :class="`px-1.5 py-0.5 select-none bg-gradient-to-b from-${TwdColor}-500 to-${TwdColor}-700 text-white text-xs ${TwdRoundedRight}`">
+            :class="`px-1.5 py-0.5 select-none bg-gradient-to-b from-${TwdColor}-300 to-${TwdColor}-500 text-white text-xs ${TwdRoundedRight}`">
             <span class="flex justify-center items-center drop-shadow-[1px_1px_rgba(0,0,0,0.3)]">
                 <slot name="label-right"></slot>
             </span>
