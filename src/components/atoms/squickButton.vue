@@ -1,5 +1,5 @@
 <template>
-    <button :id="uniqueId" :name="name" :title="title" :type="mode" :class="`
+    <button :id="uniqueId" ref="uniqueId" :name="name" :title="title" :type="mode" :class="`
         transition
         flex justify-center items-center
         px-2.5

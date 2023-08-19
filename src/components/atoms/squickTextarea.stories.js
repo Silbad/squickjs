@@ -1,4 +1,4 @@
-import SquickTextarea from './squickTextarea.vue';
+import SquickTextarea from '@/components/atoms/squickTextarea.vue';
 
 export default {
     title: 'Atoms/SquickTextarea',

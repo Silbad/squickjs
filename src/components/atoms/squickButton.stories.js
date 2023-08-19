@@ -1,4 +1,4 @@
-import SquickButton from './squickButton.vue';
+import SquickButton from '@/components/atoms/squickButton.vue';
 
 export default {
     title: 'Atoms/SquickButton',

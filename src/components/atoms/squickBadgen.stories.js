@@ -1,4 +1,4 @@
-import SquickBadgen from './squickBadgen.vue';
+import SquickBadgen from '@/components/atoms/squickBadgen.vue';
 
 export default {
     title: 'Atoms/SquickBadgen',

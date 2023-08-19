@@ -1,4 +1,4 @@
-import SquickInput from './squickInput.vue';
+import SquickInput from '@/components/atoms/squickInput.vue';
 
 export default {
     title: 'Atoms/SquickInput',

@@ -1,5 +1,5 @@
 <template>
-    <div :id="uniqueId" class="relative inline-flex h-full">
+    <div :id="uniqueId" ref="uniqueId" class="relative inline-flex h-full" tabindex="0">
         <slot></slot>
         <div :class="`
         absolute
@@ -11,10 +11,10 @@
         w-full
         h-full
         z-40
-        bg-${dark ? 'black' : 'white'}/80
-        ${blur ? 'backdrop-blur-sm' : ''}
-        ${TwdRounded}`" v-if="show">
-            <svg :class="`z-50 animate-spin h-5 w-5 text-${TwdColor}-500`" xmlns="http://www.w3.org/2000/svg" fill="none"
+        bg-${dark ? TwdColor + '-500' : TwdColor + '-100'}/80
+                ${blur ? 'backdrop-blur-sm' : ''}
+                ${TwdRounded}`" v-if="show">
+            <svg :class="`z-50 animate-spin h-5 w-5 ${dark ? 'text-' + TwdColor + '-100' : 'text-' + TwdColor + '-500'}`" xmlns="http://www.w3.org/2000/svg" fill="none"
                 viewBox="0 0 24 24">
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                 <path class="opacity-75" fill="currentColor"
@@ -47,7 +47,7 @@ const props = defineProps({
     },
     TwdColor: {
         type: String,
-        default: 'gray'
+        default: 'neutral'
     },
     TwdRounded: {
         type: String,
@@ -57,6 +57,12 @@ const props = defineProps({
 
 const instance = getCurrentInstance();
 const uniqueId = ref(null);
+
+watch(() => props.show, (newState, oldState) => {
+    if (newState === true) {
+        uniqueId.value.focus()
+    }
+})
 
 // générer un ID unique par défaut
 uniqueId.value = props.id

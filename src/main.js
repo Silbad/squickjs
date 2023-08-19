@@ -1,5 +1,13 @@
 import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import App from '@/App.vue'
 
-createApp(App).mount('#app')
+// style (tailwind)
+import '@/style.css'
+
+// vue final modal
+import { createVfm } from 'vue-final-modal';
+const vfm = createVfm()
+
+createApp(App)
+    .use(vfm)
+    .mount('#app')
