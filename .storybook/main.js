@@ -13,7 +13,7 @@ const config = {
                 },
             },
         },
-        'storybook-addon-matomo',
+        'storybook-addon-matomo'
     ],
     framework: {
         name: '@storybook/vue3-vite',
