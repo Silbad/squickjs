@@ -16,17 +16,16 @@ export default defineConfig({
         }
     },
     build: {
-        outDir: 'dist',
+        lib: {
+            entry: 'src/library.js',
+            name: 'squickjs',
+        },
         rollupOptions: {
-            input: {
-                module: './src/module.mjs'
-            },
+            external: ['vue'],
             output: {
-                entryFileNames: 'module.mjs',
-                manualChunks(id) {
-                    if (id.includes('node_modules')) {
-                        return id.toString().split('node_modules/')[1].split('/')[0].toString();
-                    }
+                format: 'es',
+                globals: {
+                    vue: 'Vue'
                 }
             }
         }

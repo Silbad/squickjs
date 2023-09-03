@@ -1,16 +1,14 @@
 {
     "name": "squickjs",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "license": "MIT",
     "type": "module",
     "repository": "github:Silbad/squickjs",
     "homepage": "https://squick.silbad.com",
     "description": "Vue3 & Tailwind components without TypeScript",
     "author": "Silbad",
-    "module": "dist/module.mjs",
-    "exports": {
-        ".": "./dist/module.mjs"
-    },
+    "main": "dist/squickjs.js",
+    "module": "dist/squickjs.js",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
