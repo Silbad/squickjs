@@ -1,8 +1,8 @@
 <template>
-    <VueFinalModal :modalId="uniqueId" :class="`flex justify-center items-center`"
-        :content-class="`flex flex-col w-64 max-w-xl mx-4 shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 ${TwdRounded}`"
+    <VueFinalModal :modalId="uniqueId" :class="`flex justify-${posX} items-${posY}`"
+        :content-class="`flex flex-col w-64 max-w-xl shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 ${TwdRounded}`"
         :content-transition="`vfm-${transitionContent}`" :overlay-transition="`vfm-${transitionOverlay}`"
-        v-model="modelValue" :clickToClose="false" :focusTrap="{
+        v-model="modelValue" :clickToClose="false" :teleportTo="teleportTo" :focusTrap="{
             allowOutsideClick: true,
             returnFocusOnDeactivate: false
         }">
@@ -43,6 +43,24 @@ const props = defineProps({
     transitionContent: {
         type: String,
         default: "slide-up"
+    },
+    teleportTo: {
+        type: [String, null, Boolean, Object],
+        default: "body"
+    },
+    posX: {
+        type: String,
+        default: "center",
+        validator: (value) => {
+            return ['start', 'end', 'center'].includes(value)
+        }
+    },
+    posY: {
+        type: String,
+        default: "center",
+        validator: (value) => {
+            return ['start', 'end', 'center'].includes(value)
+        }
     },
     TwdColor: {
         type: String,

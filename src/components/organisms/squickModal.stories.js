@@ -20,6 +20,6 @@ export const base = {
     argTypes: {
         TwdColor: {
             control: 'text',
-        },
+        }
     },
 };
