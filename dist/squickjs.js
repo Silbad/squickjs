@@ -675,7 +675,7 @@ var ot = ["input:not([inert])", "select:not([inert])", "textarea:not([inert])", 
   return oe.call(t, cn) === !1 ? !1 : Se(n, t);
 };
 /*!
-* focus-trap 7.5.2
+* focus-trap 7.5.3
 * @license MIT, https://github.com/focus-trap/focus-trap/blob/master/LICENSE
 */
 function He(e, t) {
@@ -2156,6 +2156,20 @@ const _n = { class: "p-4 empty:hidden flex flex-nowrap justify-between border-b 
       type: String,
       default: "slide-up"
     },
+    teleportTo: {
+      type: [String, null, Boolean, Object],
+      default: "body"
+    },
+    posX: {
+      type: String,
+      default: "center",
+      validator: (e) => ["start", "end", "center"].includes(e)
+    },
+    posY: {
+      type: String,
+      default: "center",
+      validator: (e) => ["start", "end", "center"].includes(e)
+    },
     TwdColor: {
       type: String,
       default: "indigo"
@@ -2178,13 +2192,14 @@ const _n = { class: "p-4 empty:hidden flex flex-nowrap justify-between border-b 
     };
     return r.value = t.id ? t.id : "btn-" + a.uid, (o, u) => (R(), Ce(T(vt), {
       modalId: r.value,
-      class: z("flex justify-center items-center"),
-      "content-class": `flex flex-col w-64 max-w-xl mx-4 shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 ${e.TwdRounded}`,
+      class: z(`flex justify-${e.posX} items-${e.posY}`),
+      "content-class": `flex flex-col w-64 max-w-xl shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 ${e.TwdRounded}`,
       "content-transition": `vfm-${e.transitionContent}`,
       "overlay-transition": `vfm-${e.transitionOverlay}`,
       modelValue: n.value,
       "onUpdate:modelValue": u[0] || (u[0] = (d) => n.value = d),
       clickToClose: !1,
+      teleportTo: e.teleportTo,
       focusTrap: {
         allowOutsideClick: !0,
         returnFocusOnDeactivate: !1
@@ -2210,7 +2225,7 @@ const _n = { class: "p-4 empty:hidden flex flex-nowrap justify-between border-b 
         ])
       ]),
       _: 3
-    }, 8, ["modalId", "content-class", "content-transition", "overlay-transition", "modelValue"]));
+    }, 8, ["modalId", "class", "content-class", "content-transition", "overlay-transition", "modelValue", "teleportTo"]));
   }
 };
 export {
