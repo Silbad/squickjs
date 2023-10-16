@@ -3,7 +3,7 @@
         :content-class="`flex flex-col ${TwdWidth} max-w-full shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 ${TwdRounded} relative`"
         :content-transition="`vfm-${transitionContent}`" :overlay-transition="`vfm-${transitionOverlay}`"
         :contentStyle="`${responsiveWidth !== null ? `width: ${responsiveWidth}px;` : ``}`" v-model="modelValue"
-        :clickToClose="false" :hideOverlay="hideOverlay" :lockScroll="lockScroll" :focusTrap="{
+        :clickToClose="false" :hideOverlay="hideOverlay" :lockScroll="lockScroll" :background="InteractionOverlay" :focusTrap="{
             allowOutsideClick: true,
             returnFocusOnDeactivate: false
         }">
@@ -80,6 +80,13 @@ const props = defineProps({
     lockScroll: {
         type: Boolean,
         default: true
+    },
+    InteractionOverlay: {
+        type: String,
+        default: "non-interactive",
+        validator: (value) => {
+            return ['non-interactive', 'interactive'].includes(value)
+        }
     },
 })
 
