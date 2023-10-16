@@ -1,22 +1,21 @@
 <template>
     <VueFinalModal :modalId="uniqueId" :class="`flex justify-${posX} items-${posY}`"
-        :content-class="`flex flex-col ${TwdWidth} max-w-full shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 ${TwdRounded}`"
-        :content-transition="`vfm-${transitionContent}`" :overlay-transition="`vfm-${transitionOverlay}`" :contentStyle="`${responsiveWidth !== null ? `width: ${responsiveWidth}px;` : ``}`"
-        v-model="modelValue" :clickToClose="false" :focusTrap="{
+        :content-class="`flex flex-col ${TwdWidth} max-w-full shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 ${TwdRounded} relative`"
+        :content-transition="`vfm-${transitionContent}`" :overlay-transition="`vfm-${transitionOverlay}`"
+        :contentStyle="`${responsiveWidth !== null ? `width: ${responsiveWidth}px;` : ``}`" v-model="modelValue"
+        :clickToClose="false" :hideOverlay="hideOverlay" :focusTrap="{
             allowOutsideClick: true,
             returnFocusOnDeactivate: false
         }">
-        <div class="p-4 empty:hidden flex flex-nowrap justify-between border-b border-gray-200 space-x-4">
-            <div class="grow">
-                <slot name="modal-header"><strong>Hello!</strong></slot>
-            </div>
-            <button type="button" @click="closeModal">
-                <svg class="transition inline stroke-black dark:stroke-white hover:stroke-red-500" width="24px"
-                    height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243"
-                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-            </button>
+        <button class="absolute right-2 top-1" type="button" @click="closeModal">
+            <svg class="transition inline stroke-black dark:stroke-white hover:stroke-red-500" width="24px" height="24px"
+                stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </button>
+        <div class="p-4 empty:hidden border-b border-gray-200 space-x-4">
+            <slot name="modal-header"><strong>Hello!</strong></slot>
         </div>
         <div class="p-4 empty:hidden">
             <slot name="modal-body"></slot>
@@ -73,6 +72,10 @@ const props = defineProps({
     responsiveWidth: {
         type: String,
         default: null
+    },
+    hideOverlay: {
+        type: Boolean,
+        default: false
     },
 })
 
