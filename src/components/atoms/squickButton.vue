@@ -15,6 +15,7 @@
         focus:ring-4
         focus:ring-${TwdColor}-500/20
         focus:border-${TwdColor}-400
+        active:ring-2
         disabled:cursor-not-allowed
         disabled:opacity-75
         disabled:bg-gray-100

@@ -1,8 +1,8 @@
 <template>
     <VueFinalModal :modalId="uniqueId" :class="`flex justify-${posX} items-${posY}`"
-        :content-class="`flex flex-col w-64 max-w-xl shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 ${TwdRounded}`"
-        :content-transition="`vfm-${transitionContent}`" :overlay-transition="`vfm-${transitionOverlay}`"
-        v-model="modelValue" :clickToClose="false" :teleportTo="teleportTo" :focusTrap="{
+        :content-class="`flex flex-col ${TwdWidth} max-w-full shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 ${TwdRounded}`"
+        :content-transition="`vfm-${transitionContent}`" :overlay-transition="`vfm-${transitionOverlay}`" :contentStyle="`${responsiveWidth !== null ? `width: ${responsiveWidth}px;` : ``}`"
+        v-model="modelValue" :clickToClose="false" :focusTrap="{
             allowOutsideClick: true,
             returnFocusOnDeactivate: false
         }">
@@ -44,10 +44,6 @@ const props = defineProps({
         type: String,
         default: "slide-up"
     },
-    teleportTo: {
-        type: [String, null, Boolean, Object],
-        default: "body"
-    },
     posX: {
         type: String,
         default: "center",
@@ -69,6 +65,14 @@ const props = defineProps({
     TwdRounded: {
         type: String,
         default: "rounded"
+    },
+    TwdWidth: {
+        type: String,
+        default: "w-full md:w-1/2"
+    },
+    responsiveWidth: {
+        type: String,
+        default: null
     },
 })
 
