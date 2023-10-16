@@ -1,5 +1,6 @@
 // atoms
 export { default as squickBadgen } from '@/components/atoms/squickBadgen.vue';
+export { default as squickBreakpoint } from '@/components/atoms/squickBreakpoint.vue';
 export { default as squickButton } from '@/components/atoms/squickButton.vue';
 export { default as squickInput } from '@/components/atoms/squickInput.vue';
 export { default as squickOverlay } from '@/components/atoms/squickOverlay.vue';
