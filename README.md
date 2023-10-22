@@ -6,6 +6,10 @@ Vue3 &amp; Tailwind components without TypeScript
 
 `pnpm i squickjs`
 
+## Dev
+
+`pnpm sdev`
+
 ## Publish
 
 - Update version package
