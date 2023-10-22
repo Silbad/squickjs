@@ -7,7 +7,7 @@
             allowOutsideClick: true,
             returnFocusOnDeactivate: false
         }">
-        <button class="absolute right-2 top-1" type="button" @click="closeModal">
+        <button class="absolute right-2 top-1" type="button" @click="closeModal" v-if="!hideCloseButton">
             <svg class="transition inline stroke-black dark:stroke-white hover:stroke-red-500" width="24px" height="24px"
                 stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243" stroke-width="1.5"
@@ -15,7 +15,7 @@
             </svg>
         </button>
         <div class="p-4 empty:hidden border-b border-gray-200 space-x-4">
-            <slot name="modal-header"><strong>Hello!</strong></slot>
+            <slot name="modal-header"></slot>
         </div>
         <div class="p-4 empty:hidden">
             <slot name="modal-body"></slot>
@@ -74,6 +74,10 @@ const props = defineProps({
         default: null
     },
     hideOverlay: {
+        type: Boolean,
+        default: false
+    },
+    hideCloseButton: {
         type: Boolean,
         default: false
     },
