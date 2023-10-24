@@ -1,4 +1,4 @@
-import { getCurrentInstance as re, ref as I, openBlock as R, createElementBlock as A, normalizeClass as D, createElementVNode as S, renderSlot as Y, mergeModels as Ee, useModel as Ce, watch as z, withDirectives as ve, vModelDynamic as yt, createCommentVNode as H, vModelText as ht, getCurrentScope as mt, onScopeDispose as gt, unref as T, defineComponent as $e, createBlock as Ne, Teleport as wt, createVNode as De, normalizeProps as Tt, guardReactiveProps as St, withCtx as se, computed as G, useAttrs as kt, inject as Pe, toRef as xt, onMounted as _e, onBeforeUnmount as et, normalizeStyle as Ae, withKeys as Et, withModifiers as qe, Transition as je, mergeProps as Oe, toHandlers as We, vShow as Fe, nextTick as tt, reactive as Ke, createTextVNode as ze } from "vue";
+import { getCurrentInstance as re, ref as $, openBlock as R, createElementBlock as A, normalizeClass as D, createElementVNode as S, renderSlot as Y, mergeModels as Ee, useModel as Ce, watch as z, withDirectives as ve, vModelDynamic as yt, createCommentVNode as H, vModelText as ht, getCurrentScope as mt, onScopeDispose as gt, unref as T, defineComponent as Ie, createBlock as Ne, Teleport as wt, createVNode as De, normalizeProps as Tt, guardReactiveProps as St, withCtx as se, computed as G, useAttrs as kt, inject as Pe, toRef as xt, onMounted as _e, onBeforeUnmount as et, normalizeStyle as Ae, withKeys as Et, withModifiers as qe, Transition as je, mergeProps as Oe, toHandlers as We, vShow as Be, nextTick as tt, reactive as Ke, createTextVNode as ze } from "vue";
 const Ct = { class: "flex justify-center items-center drop-shadow-[1px_1px_rgba(0,0,0,0.3)]" }, Nt = { class: "flex justify-center items-center drop-shadow-[1px_1px_rgba(0,0,0,0.3)]" }, ra = {
   __name: "squickBadgen",
   props: {
@@ -20,7 +20,7 @@ const Ct = { class: "flex justify-center items-center drop-shadow-[1px_1px_rgba(
     }
   },
   setup(e) {
-    const t = e, n = re(), a = I(null);
+    const t = e, n = re(), a = $(null);
     return a.value = t.id ? t.id : "squick-badgen-" + n.uid, (r, l) => (R(), A("div", {
       class: D(`badgen transition inline-flex flex-nowrap shadow-sm ${e.TwdRoundedLeft} ${e.TwdRoundedRight}`)
     }, [
@@ -86,7 +86,7 @@ const Ct = { class: "flex justify-center items-center drop-shadow-[1px_1px_rgba(
       }, " 2xl ", 2)
     ], 2));
   }
-}, Ot = ["id", "name", "title", "type", "disabled"], Ft = {
+}, Ot = ["id", "name", "title", "type", "disabled"], Bt = {
   __name: "squickButton",
   props: {
     id: {
@@ -123,7 +123,7 @@ const Ct = { class: "flex justify-center items-center drop-shadow-[1px_1px_rgba(
     }
   },
   setup(e) {
-    const t = e, n = re(), a = I(null);
+    const t = e, n = re(), a = $(null);
     return a.value = t.id ? t.id : "squick-button-" + n.uid, (r, l) => (R(), A("button", {
       id: a.value,
       ref_key: "uniqueId",
@@ -159,22 +159,22 @@ const Ct = { class: "flex justify-center items-center drop-shadow-[1px_1px_rgba(
       Y(r.$slots, "default")
     ], 10, Ot));
   }
-}, Bt = ["id", "name", "title", "type", "disabled", "required", "readonly", "placeholder"], Rt = {
+}, Ft = ["id", "name", "title", "type", "disabled", "required", "readonly", "placeholder"], Rt = {
   key: 0,
   class: "px-2.5 w-12 text-sm absolute inset-y-0 right-0 flex justify-center items-center"
-}, It = /* @__PURE__ */ S("path", {
+}, $t = /* @__PURE__ */ S("path", {
   d: "M3 3l18 18M10.5 10.677a2 2 0 002.823 2.823",
   "stroke-width": "1.5",
   "stroke-linecap": "round",
   "stroke-linejoin": "round"
-}, null, -1), $t = /* @__PURE__ */ S("path", {
+}, null, -1), It = /* @__PURE__ */ S("path", {
   d: "M7.362 7.561C5.68 8.74 4.279 10.42 3 12c1.889 2.991 5.282 6 9 6 1.55 0 3.043-.523 4.395-1.35M12 6c4.008 0 6.701 3.158 9 6a15.66 15.66 0 01-1.078 1.5",
   "stroke-width": "1.5",
   "stroke-linecap": "round",
   "stroke-linejoin": "round"
 }, null, -1), Dt = [
-  It,
-  $t
+  $t,
+  It
 ], Mt = /* @__PURE__ */ S("path", {
   d: "M12 14a2 2 0 100-4 2 2 0 000 4z",
   "stroke-width": "1.5",
@@ -248,7 +248,7 @@ const Ct = { class: "flex justify-center items-center drop-shadow-[1px_1px_rgba(
   }),
   emits: ["update:modelValue"],
   setup(e) {
-    const t = e, n = Ce(e, "modelValue", { local: !0 }), a = re(), r = I(null), l = I(t.password ? "password" : "text");
+    const t = e, n = Ce(e, "modelValue", { local: !0 }), a = re(), r = $(null), l = $(t.password ? "password" : "text");
     z(() => t.password, (s, d) => {
       l.value = s ? "password" : "text";
     });
@@ -288,7 +288,7 @@ const Ct = { class: "flex justify-center items-center drop-shadow-[1px_1px_rgba(
         readonly: e.readonly,
         placeholder: e.placeholder,
         "onUpdate:modelValue": d[0] || (d[0] = (b) => n.value = b)
-      }, null, 10, Bt), [
+      }, null, 10, Ft), [
         [
           yt,
           n.value,
@@ -361,7 +361,7 @@ const Ct = { class: "flex justify-center items-center drop-shadow-[1px_1px_rgba(
     }
   },
   setup(e) {
-    const t = e, n = re(), a = I(null);
+    const t = e, n = re(), a = $(null);
     return z(() => t.show, (r, l) => {
       r === !0 && a.value.focus();
     }), a.value = t.id ? t.id : "squick-overlay-" + n.uid, (r, l) => (R(), A("div", {
@@ -445,7 +445,7 @@ const Ct = { class: "flex justify-center items-center drop-shadow-[1px_1px_rgba(
   }),
   emits: ["update:modelValue"],
   setup(e) {
-    const t = e, n = Ce(e, "modelValue", { local: !0 }), a = re(), r = I(null);
+    const t = e, n = Ce(e, "modelValue", { local: !0 }), a = re(), r = $(null);
     return r.value = t.id ? t.id : "squick-textarea-" + a.uid, (l, o) => (R(), A("div", {
       class: D(`relative inline-flex ${e.TwdWidth}`)
     }, [
@@ -676,7 +676,7 @@ var rt = ["input:not([inert])", "select:not([inert])", "textarea:not([inert])", 
   //  note related to `candidateSelectors`)
   Se(n) || Qt(n) || on(n, t) || // For a details element with a summary, the summary element gets the focus
   Jt(n) || rn(n));
-}, Ie = function(t, n) {
+}, $e = function(t, n) {
   return !(nn(n) || ae(n) < 0 || !ke(t, n));
 }, ln = function(t) {
   var n = parseInt(t.getAttribute("tabindex"), 10);
@@ -699,11 +699,11 @@ var rt = ["input:not([inert])", "select:not([inert])", "textarea:not([inert])", 
   n = n || {};
   var a;
   return n.getShadowRoot ? a = ut([t], n.includeContainer, {
-    filter: Ie.bind(null, n),
+    filter: $e.bind(null, n),
     flatten: !1,
     getShadowRoot: n.getShadowRoot,
     shadowRootFilter: ln
-  }) : a = it(t, n.includeContainer, Ie.bind(null, n)), un(a);
+  }) : a = it(t, n.includeContainer, $e.bind(null, n)), un(a);
 }, dn = function(t, n) {
   n = n || {};
   var a;
@@ -715,8 +715,8 @@ var rt = ["input:not([inert])", "select:not([inert])", "textarea:not([inert])", 
 }, ue = function(t, n) {
   if (n = n || {}, !t)
     throw new Error("No node provided");
-  return oe.call(t, we) === !1 ? !1 : Ie(n, t);
-}, cn = /* @__PURE__ */ rt.concat("iframe").join(","), Be = function(t, n) {
+  return oe.call(t, we) === !1 ? !1 : $e(n, t);
+}, cn = /* @__PURE__ */ rt.concat("iframe").join(","), Fe = function(t, n) {
   if (n = n || {}, !t)
     throw new Error("No node provided");
   return oe.call(t, cn) === !1 ? !1 : ke(n, t);
@@ -859,8 +859,8 @@ var Ye = {
       //  web components if the `tabbableOptions.getShadowRoot` option was used for
       //  the trap, enabling shadow DOM support in tabbable (`Node.contains()` doesn't
       //  look inside web components even if open)
-      (c == null ? void 0 : c.includes(g)) || C.find(function(F) {
-        return F === i;
+      (c == null ? void 0 : c.includes(g)) || C.find(function(B) {
+        return B === i;
       });
     });
   }, y = function(i) {
@@ -883,7 +883,7 @@ var Ye = {
     var i = y("initialFocus");
     if (i === !1)
       return !1;
-    if (i === void 0 || !Be(i, l.tabbableOptions))
+    if (i === void 0 || !Fe(i, l.tabbableOptions))
       if (b(a.activeElement) >= 0)
         i = a.activeElement;
       else {
@@ -897,7 +897,7 @@ var Ye = {
     if (o.containerGroups = o.containers.map(function(i) {
       var u = sn(i, l.tabbableOptions), c = dn(i, l.tabbableOptions), m = u.length > 0 ? u[0] : void 0, g = u.length > 0 ? u[u.length - 1] : void 0, C = c.find(function(V) {
         return ue(V);
-      }), F = c.slice().reverse().find(function(V) {
+      }), B = c.slice().reverse().find(function(V) {
         return ue(V);
       }), q = !!u.find(function(V) {
         return ae(V) > 0;
@@ -922,7 +922,7 @@ var Ye = {
         /** First tabbable node in container, __DOM__ order; `undefined` if none. */
         firstDomTabbableNode: C,
         /** Last tabbable node in container, __DOM__ order; `undefined` if none. */
-        lastDomTabbableNode: F,
+        lastDomTabbableNode: B,
         /**
          * Finds the __tabbable__ node that follows the given node in the specified direction,
          *  in this container, if any.
@@ -970,15 +970,15 @@ var Ye = {
     u = u || he(c), E();
     var C = null;
     if (o.tabbableGroups.length > 0) {
-      var F = b(u, c), q = F >= 0 ? o.containerGroups[F] : void 0;
-      if (F < 0)
+      var B = b(u, c), q = B >= 0 ? o.containerGroups[B] : void 0;
+      if (B < 0)
         g ? C = o.tabbableGroups[o.tabbableGroups.length - 1].lastTabbableNode : C = o.tabbableGroups[0].firstTabbableNode;
       else if (g) {
         var V = Ze(o.tabbableGroups, function(ie) {
           var de = ie.firstTabbableNode;
           return u === de;
         });
-        if (V < 0 && (q.container === u || Be(u, l.tabbableOptions) && !ue(u, l.tabbableOptions) && !q.nextTabbableNode(u, !1)) && (V = F), V >= 0) {
+        if (V < 0 && (q.container === u || Fe(u, l.tabbableOptions) && !ue(u, l.tabbableOptions) && !q.nextTabbableNode(u, !1)) && (V = B), V >= 0) {
           var Z = V === 0 ? o.tabbableGroups.length - 1 : V - 1, _ = o.tabbableGroups[Z];
           C = ae(u) >= 0 ? _.lastTabbableNode : _.lastDomTabbableNode;
         } else
@@ -988,7 +988,7 @@ var Ye = {
           var de = ie.lastTabbableNode;
           return u === de;
         });
-        if (P < 0 && (q.container === u || Be(u, l.tabbableOptions) && !ue(u, l.tabbableOptions) && !q.nextTabbableNode(u)) && (P = F), P >= 0) {
+        if (P < 0 && (q.container === u || Fe(u, l.tabbableOptions) && !ue(u, l.tabbableOptions) && !q.nextTabbableNode(u)) && (P = B), P >= 0) {
           var ne = P === o.tabbableGroups.length - 1 ? 0 : P + 1, le = o.tabbableGroups[ne];
           C = ae(u) >= 0 ? le.firstTabbableNode : le.firstDomTabbableNode;
         } else
@@ -1023,12 +1023,12 @@ var Ye = {
       var m, g = !0;
       if (o.mostRecentlyFocusedNode)
         if (ae(o.mostRecentlyFocusedNode) > 0) {
-          var C = b(o.mostRecentlyFocusedNode), F = o.containerGroups[C].tabbableNodes;
-          if (F.length > 0) {
-            var q = F.findIndex(function(V) {
+          var C = b(o.mostRecentlyFocusedNode), B = o.containerGroups[C].tabbableNodes;
+          if (B.length > 0) {
+            var q = B.findIndex(function(V) {
               return V === o.mostRecentlyFocusedNode;
             });
-            q >= 0 && (l.isKeyForward(o.recentNavEvent) ? q + 1 < F.length && (m = F[q + 1], g = !1) : q - 1 >= 0 && (m = F[q - 1], g = !1));
+            q >= 0 && (l.isKeyForward(o.recentNavEvent) ? q + 1 < B.length && (m = B[q + 1], g = !1) : q - 1 >= 0 && (m = B[q - 1], g = !1));
           }
         } else
           o.containerGroups.some(function(V) {
@@ -1083,7 +1083,7 @@ var Ye = {
   }, p = function() {
     if (o.active)
       return a.removeEventListener("focusin", L, !0), a.removeEventListener("mousedown", O, !0), a.removeEventListener("touchstart", O, !0), a.removeEventListener("click", v, !0), a.removeEventListener("keydown", X, !0), s;
-  }, $ = function(i) {
+  }, I = function(i) {
     var u = i.some(function(c) {
       var m = Array.from(c.removedNodes);
       return m.some(function(g) {
@@ -1091,7 +1091,7 @@ var Ye = {
       });
     });
     u && N(f());
-  }, M = typeof window < "u" && "MutationObserver" in window ? new MutationObserver($) : void 0, J = function() {
+  }, M = typeof window < "u" && "MutationObserver" in window ? new MutationObserver(I) : void 0, J = function() {
     M && (M.disconnect(), o.active && !o.paused && o.containers.map(function(i) {
       M.observe(i, {
         subtree: !0,
@@ -1127,12 +1127,12 @@ var Ye = {
       clearTimeout(o.delayInitialFocusTimer), o.delayInitialFocusTimer = void 0, p(), o.active = !1, o.paused = !1, J(), Ye.deactivateTrap(r, s);
       var c = d(u, "onDeactivate"), m = d(u, "onPostDeactivate"), g = d(u, "checkCanReturnFocus"), C = d(u, "returnFocus", "returnFocusOnDeactivate");
       c == null || c();
-      var F = function() {
+      var B = function() {
         Xe(function() {
           C && N(U(o.nodeFocusedBeforeActivation)), m == null || m();
         });
       };
-      return C && g ? (g(U(o.nodeFocusedBeforeActivation)).then(F, F), this) : (F(), this);
+      return C && g ? (g(U(o.nodeFocusedBeforeActivation)).then(B, B), this) : (B(), this);
     },
     pause: function(i) {
       if (o.paused || !o.active)
@@ -1156,7 +1156,7 @@ var Ye = {
 };
 function Tn(e, t = {}) {
   let n;
-  const { immediate: a, ...r } = t, l = I(!1), o = I(!1), s = (f) => n && n.activate(f), d = (f) => n && n.deactivate(f), b = () => {
+  const { immediate: a, ...r } = t, l = $(!1), o = $(!1), s = (f) => n && n.activate(f), d = (f) => n && n.deactivate(f), b = () => {
     n && (n.pause(), o.value = !0);
   }, y = () => {
     n && (n.unpause(), o.value = !1);
@@ -1416,7 +1416,7 @@ const Me = {
   }
 };
 function Qe(e = !1) {
-  const t = I(e), n = I(t.value ? 0 : void 0);
+  const t = $(e), n = $(t.value ? 0 : void 0);
   return [t, n, {
     beforeEnter() {
       n.value = 1;
@@ -1433,7 +1433,7 @@ function Qe(e = !1) {
   }];
 }
 function kn(e, t) {
-  const { modelValueLocal: n, onEntering: a, onEnter: r, onLeaving: l, onLeave: o } = t, s = I(n.value), [d, b, y] = Qe(s.value), [f, E, x] = Qe(s.value), N = G(() => typeof e.contentTransition == "string" ? { name: e.contentTransition } : { ...e.contentTransition }), U = G(() => typeof e.overlayTransition == "string" ? { name: e.overlayTransition } : { ...e.overlayTransition }), j = G(
+  const { modelValueLocal: n, onEntering: a, onEnter: r, onLeaving: l, onLeave: o } = t, s = $(n.value), [d, b, y] = Qe(s.value), [f, E, x] = Qe(s.value), N = G(() => typeof e.contentTransition == "string" ? { name: e.contentTransition } : { ...e.contentTransition }), U = G(() => typeof e.overlayTransition == "string" ? { name: e.overlayTransition } : { ...e.overlayTransition }), j = G(
     () => (e.hideOverlay || E.value === 2) && b.value === 2
     /* Leave */
   );
@@ -1473,7 +1473,7 @@ function kn(e, t) {
   };
 }
 function xn(e, t, n) {
-  const { vfmRootEl: a, vfmContentEl: r, visible: l, modelValueLocal: o } = n, s = I();
+  const { vfmRootEl: a, vfmContentEl: r, visible: l, modelValueLocal: o } = n, s = $();
   function d() {
     l.value && e.escToClose && (o.value = !1);
   }
@@ -1491,7 +1491,7 @@ function xn(e, t, n) {
   };
 }
 function En(e, t) {
-  const n = I(!!e.modelValue);
+  const n = $(!!e.modelValue);
   return z(() => e.modelValue, (a) => {
     n.value = !!a;
   }), z(n, (a) => {
@@ -1535,7 +1535,7 @@ const Nn = (e) => {
     return !1;
   const t = window.getComputedStyle(e);
   return ["auto", "scroll"].includes(t.overflowY) && e.scrollHeight > e.clientHeight;
-}, On = (e, t) => !(e.scrollTop === 0 && t < 0 || e.scrollTop + e.clientHeight + t >= e.scrollHeight && t > 0), Fn = (e) => {
+}, On = (e, t) => !(e.scrollTop === 0 && t < 0 || e.scrollTop + e.clientHeight + t >= e.scrollHeight && t > 0), Bn = (e) => {
   const t = [];
   for (; e; ) {
     if (t.push(e), e.classList.contains("vfm"))
@@ -1543,12 +1543,12 @@ const Nn = (e) => {
     e = e.parentElement;
   }
   return t;
-}, Bn = (e, t) => {
+}, Fn = (e, t) => {
   let n = !1;
-  return Fn(e).forEach((a) => {
+  return Bn(e).forEach((a) => {
     Nn(a) && On(a, t) && (n = !0);
   }), n;
-}, vt = (e) => te.some(() => Bn(e, -ge)), Ve = (e) => {
+}, vt = (e) => te.some(() => Fn(e, -ge)), Ve = (e) => {
   const t = e || window.event;
   return vt(t.target) || t.touches.length > 1 ? !0 : (t.preventDefault && t.preventDefault(), !1);
 }, Rn = (e) => {
@@ -1560,9 +1560,9 @@ const Nn = (e) => {
     }
   }
   pe === void 0 && (pe = document.body.style.overflow, document.body.style.overflow = "hidden");
-}, In = () => {
+}, $n = () => {
   ye !== void 0 && (document.body.style.paddingRight = ye, ye = void 0), pe !== void 0 && (document.body.style.overflow = pe, pe = void 0);
-}, $n = (e) => e ? e.scrollHeight - e.scrollTop <= e.clientHeight : !1, Dn = (e, t) => (ge = e.targetTouches[0].clientY - ft, vt(e.target) ? !1 : t && t.scrollTop === 0 && ge > 0 || $n(t) && ge < 0 ? Ve(e) : (e.stopPropagation(), !0)), Mn = (e, t) => {
+}, In = (e) => e ? e.scrollHeight - e.scrollTop <= e.clientHeight : !1, Dn = (e, t) => (ge = e.targetTouches[0].clientY - ft, vt(e.target) ? !1 : t && t.scrollTop === 0 && ge > 0 || In(t) && ge < 0 ? Ve(e) : (e.stopPropagation(), !0)), Mn = (e, t) => {
   if (!e) {
     console.error(
       "disableBodyScroll unsuccessful - targetElement must be provided when calling disableBodyScroll on IOS devices."
@@ -1587,7 +1587,7 @@ const Nn = (e) => {
     );
     return;
   }
-  te = te.filter((t) => t.targetElement !== e), ct ? (e.ontouchstart = null, e.ontouchmove = null, xe && te.length === 0 && (document.removeEventListener("touchmove", Ve, Le ? { passive: !1 } : void 0), xe = !1)) : te.length || In();
+  te = te.filter((t) => t.targetElement !== e), ct ? (e.ontouchstart = null, e.ontouchmove = null, xe && te.length === 0 && (document.removeEventListener("touchmove", Ve, Le ? { passive: !1 } : void 0), xe = !1)) : te.length || $n();
 };
 function Vn(e, t) {
   const { lockScrollEl: n, modelValueLocal: a } = t;
@@ -1642,7 +1642,7 @@ function Pn(e) {
   };
 }
 function An(e) {
-  const t = I();
+  const t = $();
   function n(r) {
     var l;
     t.value = (l = e.zIndexFn) == null ? void 0 : l.call(e, { index: r <= -1 ? 0 : r });
@@ -1704,16 +1704,16 @@ function jn(e, {
 }) {
   const o = Ke({ x: 0, y: 0 }), s = Ke({ x: 0, y: 0 }), d = G(() => o.x - s.x), b = G(() => o.y - s.y), { max: y, abs: f } = Math, E = G(
     () => y(f(d.value), f(b.value)) >= t
-  ), x = I(!1), N = G(() => E.value ? f(d.value) > f(b.value) ? d.value > 0 ? "left" : "right" : b.value > 0 ? "up" : "down" : "none"), U = (p, $) => {
-    o.x = p, o.y = $;
-  }, j = (p, $) => {
-    s.x = p, s.y = $;
+  ), x = $(!1), N = G(() => E.value ? f(d.value) > f(b.value) ? d.value > 0 ? "left" : "right" : b.value > 0 ? "up" : "down" : "none"), U = (p, I) => {
+    o.x = p, o.y = I;
+  }, j = (p, I) => {
+    s.x = p, s.y = I;
   };
   let O, L;
   function W(p) {
     O.capture && !O.passive && p.preventDefault();
-    const { x: $, y: M } = Je(p);
-    U($, M), j($, M), n == null || n(p), L = [
+    const { x: I, y: M } = Je(p);
+    U(I, M), j(I, M), n == null || n(p), L = [
       ee(e, "mousemove", X, O),
       ee(e, "touchmove", X, O),
       ee(e, "mouseup", v, O),
@@ -1722,11 +1722,11 @@ function jn(e, {
     ];
   }
   function X(p) {
-    const { x: $, y: M } = Je(p);
-    j($, M), !x.value && E.value && (x.value = !0), x.value && (a == null || a(p));
+    const { x: I, y: M } = Je(p);
+    j(I, M), !x.value && E.value && (x.value = !0), x.value && (a == null || a(p));
   }
   function v(p) {
-    x.value && (r == null || r(p, N.value)), x.value = !1, L.forEach(($) => $());
+    x.value && (r == null || r(p, N.value)), x.value = !1, L.forEach((I) => I());
   }
   let k = [];
   return _e(() => {
@@ -1748,10 +1748,10 @@ function jn(e, {
   };
 }
 function Wn(e, t) {
-  const { vfmContentEl: n, modelValueLocal: a } = t, r = 0.1, l = 300, o = I(), s = G(() => {
+  const { vfmContentEl: n, modelValueLocal: a } = t, r = 0.1, l = 300, o = $(), s = G(() => {
     if (!(e.swipeToClose === void 0 || e.swipeToClose === "none"))
       return e.showSwipeBanner ? o.value : n.value;
-  }), d = I(0), b = I(!0);
+  }), d = $(0), b = $(!0);
   let y = Q, f = !0, E, x = !1;
   const { lengthX: N, lengthY: U, direction: j, isSwiping: O } = jn(s, {
     threshold: e.threshold,
@@ -1762,7 +1762,7 @@ function Wn(e, t) {
       }), E = (/* @__PURE__ */ new Date()).getTime(), x = X(v == null ? void 0 : v.target);
     },
     onSwipe() {
-      var v, k, p, $;
+      var v, k, p, I;
       if (x && b.value && j.value === e.swipeToClose) {
         if (j.value === "up") {
           const M = me(Math.abs(U.value || 0), 0, ((v = s.value) == null ? void 0 : v.offsetHeight) || 0) - (e.threshold || 0);
@@ -1774,7 +1774,7 @@ function Wn(e, t) {
           const M = me(Math.abs(N.value || 0), 0, ((p = s.value) == null ? void 0 : p.offsetWidth) || 0) - (e.threshold || 0);
           d.value = -M;
         } else if (j.value === "left") {
-          const M = me(Math.abs(N.value || 0), 0, (($ = s.value) == null ? void 0 : $.offsetWidth) || 0) - (e.threshold || 0);
+          const M = me(Math.abs(N.value || 0), 0, ((I = s.value) == null ? void 0 : I.offsetWidth) || 0) - (e.threshold || 0);
           d.value = M;
         }
       }
@@ -1784,14 +1784,14 @@ function Wn(e, t) {
         b.value = !0;
         return;
       }
-      const p = (/* @__PURE__ */ new Date()).getTime(), $ = k === e.swipeToClose, M = (() => {
+      const p = (/* @__PURE__ */ new Date()).getTime(), I = k === e.swipeToClose, M = (() => {
         var h, i;
         if (k === "up" || k === "down")
           return Math.abs((U == null ? void 0 : U.value) || 0) > r * (((h = s.value) == null ? void 0 : h.offsetHeight) || 0);
         if (k === "left" || k === "right")
           return Math.abs((N == null ? void 0 : N.value) || 0) > r * (((i = s.value) == null ? void 0 : i.offsetWidth) || 0);
       })(), J = p - E <= l;
-      if (f && x && $ && (M || J)) {
+      if (f && x && I && (M || J)) {
         a.value = !1;
         return;
       }
@@ -1870,7 +1870,7 @@ function Wn(e, t) {
     onTouchStartSwipeBanner: W
   };
 }
-const Kn = Symbol("vfm"), zn = Symbol("internalVfm"), Un = /* @__PURE__ */ $e({
+const Kn = Symbol("vfm"), zn = Symbol("internalVfm"), Un = /* @__PURE__ */ Ie({
   __name: "CoreModal",
   props: Me,
   emits: ["update:modelValue", "beforeOpen", "opened", "beforeClose", "closed", "clickOutside"],
@@ -1892,14 +1892,14 @@ const Kn = Symbol("vfm"), zn = Symbol("internalVfm"), Un = /* @__PURE__ */ $e({
       moveToLastOpenedModalOverlays: Q,
       deleteFromOpenedModalOverlays: Q,
       deleteFromModals: Q
-    }), f = I(), E = I(), { focus: x, blur: N } = Cn(n, { focusEl: f }), { zIndex: U, refreshZIndex: j, resetZIndex: O } = An(n), { modelValueLocal: L } = En(n, t), { enableBodyScroll: W, disableBodyScroll: X } = Vn(n, {
+    }), f = $(), E = $(), { focus: x, blur: N } = Cn(n, { focusEl: f }), { zIndex: U, refreshZIndex: j, resetZIndex: O } = An(n), { modelValueLocal: L } = En(n, t), { enableBodyScroll: W, disableBodyScroll: X } = Vn(n, {
       lockScrollEl: f,
       modelValueLocal: L
     }), { emitEvent: v } = Pn(t);
     let k = Q;
     const {
       visible: p,
-      contentVisible: $,
+      contentVisible: I,
       contentListeners: M,
       contentTransition: J,
       overlayVisible: h,
@@ -1920,7 +1920,7 @@ const Kn = Symbol("vfm"), zn = Symbol("internalVfm"), Un = /* @__PURE__ */ $e({
       onLeave() {
         s(ne()), O(), W(), v("closed"), k("closed");
       }
-    }), { onEsc: g, onMouseupRoot: C, onMousedown: F } = xn(n, t, { vfmRootEl: f, vfmContentEl: E, visible: p, modelValueLocal: L }), {
+    }), { onEsc: g, onMouseupRoot: C, onMousedown: B } = xn(n, t, { vfmRootEl: f, vfmContentEl: E, visible: p, modelValueLocal: L }), {
       swipeBannerEl: q,
       bindSwipe: V,
       onTouchStartSwipeBanner: Z
@@ -1930,8 +1930,8 @@ const Kn = Symbol("vfm"), zn = Symbol("internalVfm"), Un = /* @__PURE__ */ $e({
       overlayVisible: h,
       focus: x,
       toggle(w) {
-        return new Promise((B) => {
-          k = Sn((pt) => B(pt));
+        return new Promise((F) => {
+          k = Sn((pt) => F(pt));
           const K = typeof w == "boolean" ? w : !L.value;
           L.value = K, t("update:modelValue", K);
         });
@@ -1956,7 +1956,7 @@ const Kn = Symbol("vfm"), zn = Symbol("internalVfm"), Un = /* @__PURE__ */ $e({
     }
     return et(() => {
       W(), y(P), s(P), b(P), N(), l();
-    }), (w, B) => w.displayDirective !== "if" || T(p) ? ve((R(), A("div", {
+    }), (w, F) => w.displayDirective !== "if" || T(p) ? ve((R(), A("div", {
       key: 0,
       ref_key: "vfmRootEl",
       ref: f,
@@ -1964,9 +1964,9 @@ const Kn = Symbol("vfm"), zn = Symbol("internalVfm"), Un = /* @__PURE__ */ $e({
       style: Ae({ zIndex: T(U) }),
       role: "dialog",
       "aria-modal": "true",
-      onKeydown: B[7] || (B[7] = Et(() => T(g)(), ["esc"])),
-      onMouseup: B[8] || (B[8] = qe(() => T(C)(), ["self"])),
-      onMousedown: B[9] || (B[9] = qe((K) => T(F)(K), ["self"]))
+      onKeydown: F[7] || (F[7] = Et(() => T(g)(), ["esc"])),
+      onMouseup: F[8] || (F[8] = qe(() => T(C)(), ["self"])),
+      onMousedown: F[9] || (F[9] = qe((K) => T(B)(K), ["self"]))
     }, [
       _.value ? H("", !0) : (R(), Ne(je, Oe({ key: 0 }, T(u), { appear: !0 }, We(T(i))), {
         default: se(() => [
@@ -1976,7 +1976,7 @@ const Kn = Symbol("vfm"), zn = Symbol("internalVfm"), Un = /* @__PURE__ */ $e({
             style: Ae(w.overlayStyle),
             "aria-hidden": "true"
           }, null, 6)), [
-            [Fe, w.displayDirective !== "show" || T(h)],
+            [Be, w.displayDirective !== "show" || T(h)],
             [T(Re), w.displayDirective !== "visible" || T(h)]
           ]) : H("", !0)
         ]),
@@ -1984,7 +1984,7 @@ const Kn = Symbol("vfm"), zn = Symbol("internalVfm"), Un = /* @__PURE__ */ $e({
       }, 16)),
       De(je, Oe(T(J), { appear: !0 }, We(T(M))), {
         default: se(() => [
-          w.displayDirective !== "if" || T($) ? ve((R(), A("div", Oe({
+          w.displayDirective !== "if" || T(I) ? ve((R(), A("div", Oe({
             key: 0,
             ref_key: "vfmContentEl",
             ref: E,
@@ -1992,7 +1992,7 @@ const Kn = Symbol("vfm"), zn = Symbol("internalVfm"), Un = /* @__PURE__ */ $e({
             style: w.contentStyle,
             tabindex: "0"
           }, T(V), {
-            onMousedown: B[6] || (B[6] = () => T(F)())
+            onMousedown: F[6] || (F[6] = () => T(B)())
           }), [
             Y(w.$slots, "default"),
             w.showSwipeBanner ? (R(), A("div", {
@@ -2000,41 +2000,41 @@ const Kn = Symbol("vfm"), zn = Symbol("internalVfm"), Un = /* @__PURE__ */ $e({
               ref_key: "swipeBannerEl",
               ref: q,
               class: "vfm-swipe-banner-container",
-              onTouchstart: B[2] || (B[2] = (K) => T(Z)(K))
+              onTouchstart: F[2] || (F[2] = (K) => T(Z)(K))
             }, [
               Y(w.$slots, "swipe-banner", {}, () => [
                 S("div", {
                   class: "vfm-swipe-banner-back",
-                  onTouchstart: B[0] || (B[0] = (K) => w.swipeToClose === "left" && K.preventDefault())
+                  onTouchstart: F[0] || (F[0] = (K) => w.swipeToClose === "left" && K.preventDefault())
                 }, null, 32),
                 S("div", {
                   class: "vfm-swipe-banner-forward",
-                  onTouchstart: B[1] || (B[1] = (K) => w.swipeToClose === "right" && K.preventDefault())
+                  onTouchstart: F[1] || (F[1] = (K) => w.swipeToClose === "right" && K.preventDefault())
                 }, null, 32)
               ])
             ], 544)) : !w.showSwipeBanner && w.preventNavigationGestures ? (R(), A("div", {
               key: 1,
               class: "vfm-swipe-banner-container",
-              onTouchstart: B[5] || (B[5] = (K) => T(Z)(K))
+              onTouchstart: F[5] || (F[5] = (K) => T(Z)(K))
             }, [
               S("div", {
                 class: "vfm-swipe-banner-back",
-                onTouchstart: B[3] || (B[3] = (K) => w.swipeToClose === "left" && K.preventDefault())
+                onTouchstart: F[3] || (F[3] = (K) => w.swipeToClose === "left" && K.preventDefault())
               }, null, 32),
               S("div", {
                 class: "vfm-swipe-banner-forward",
-                onTouchstart: B[4] || (B[4] = (K) => w.swipeToClose === "right" && K.preventDefault())
+                onTouchstart: F[4] || (F[4] = (K) => w.swipeToClose === "right" && K.preventDefault())
               }, null, 32)
             ], 32)) : H("", !0)
           ], 16)), [
-            [Fe, w.displayDirective !== "show" || T($)],
-            [T(Re), w.displayDirective !== "visible" || T($)]
+            [Be, w.displayDirective !== "show" || T(I)],
+            [T(Re), w.displayDirective !== "visible" || T(I)]
           ]) : H("", !0)
         ]),
         _: 3
       }, 16)
     ], 38)), [
-      [Fe, w.displayDirective !== "show" || T(p)],
+      [Be, w.displayDirective !== "show" || T(p)],
       [T(Re), w.displayDirective !== "visible" || T(p)]
     ]) : H("", !0);
   }
@@ -2052,9 +2052,9 @@ const Kn = Symbol("vfm"), zn = Symbol("internalVfm"), Un = /* @__PURE__ */ $e({
     type: [String, null, Boolean, Object],
     default: "body"
   }
-}, Hn = $e({
+}, Hn = Ie({
   inheritAttrs: !1
-}), bt = /* @__PURE__ */ $e({
+}), bt = /* @__PURE__ */ Ie({
   ...Hn,
   __name: "VueFinalModal",
   props: Gn,
@@ -2139,7 +2139,7 @@ const Qn = { class: "p-4 empty:hidden" }, Jn = {
   }),
   emits: ["update:modelValue"],
   setup(e) {
-    const t = e, n = Ce(e, "modelValue", { local: !0 }), a = re(), r = I(null), l = () => {
+    const t = e, n = Ce(e, "modelValue", { local: !0 }), a = re(), r = $(null), l = () => {
       n.value = !1;
     };
     return r.value = t.id ? t.id : "btn-" + a.uid, (o, s) => (R(), Ne(T(bt), {
@@ -2163,7 +2163,7 @@ const Qn = { class: "p-4 empty:hidden" }, Jn = {
           ])
         ]),
         e.mode === "alert" ? (R(), A("div", Jn, [
-          De(Ft, { onClick: l }, {
+          De(Bt, { onClick: l }, {
             default: se(() => [
               ze("OK")
             ]),
@@ -2245,10 +2245,14 @@ const _n = /* @__PURE__ */ S("svg", {
       type: Boolean,
       default: !0
     },
-    InteractionOverlay: {
+    interactionOverlay: {
       type: String,
       default: "non-interactive",
       validator: (e) => ["non-interactive", "interactive"].includes(e)
+    },
+    focusTrap: {
+      type: [Boolean, Object],
+      default: () => ({ allowOutsideClick: !0 })
     }
   }, {
     modelValue: {
@@ -2259,7 +2263,7 @@ const _n = /* @__PURE__ */ S("svg", {
   }),
   emits: ["update:modelValue"],
   setup(e) {
-    const t = e, n = Ce(e, "modelValue", { local: !0 }), a = re(), r = I(null), l = () => {
+    const t = e, n = Ce(e, "modelValue", { local: !0 }), a = re(), r = $(null), l = () => {
       n.value = !1;
     };
     return r.value = t.id ? t.id : "btn-" + a.uid, (o, s) => (R(), Ne(T(bt), {
@@ -2274,11 +2278,8 @@ const _n = /* @__PURE__ */ S("svg", {
       clickToClose: !1,
       hideOverlay: e.hideOverlay,
       lockScroll: e.lockScroll,
-      background: e.InteractionOverlay,
-      focusTrap: {
-        allowOutsideClick: !0,
-        returnFocusOnDeactivate: !1
-      }
+      background: e.interactionOverlay,
+      focusTrap: e.focusTrap
     }, {
       default: se(() => [
         e.hideCloseButton ? H("", !0) : (R(), A("button", {
@@ -2298,13 +2299,13 @@ const _n = /* @__PURE__ */ S("svg", {
         ])
       ]),
       _: 3
-    }, 8, ["modalId", "class", "content-class", "content-transition", "overlay-transition", "contentStyle", "modelValue", "hideOverlay", "lockScroll", "background"]));
+    }, 8, ["modalId", "class", "content-class", "content-transition", "overlay-transition", "contentStyle", "modelValue", "hideOverlay", "lockScroll", "background", "focusTrap"]));
   }
 };
 export {
   ra as squickBadgen,
   la as squickBreakpoint,
-  Ft as squickButton,
+  Bt as squickButton,
   da as squickDialog,
   ia as squickInput,
   ca as squickModal,

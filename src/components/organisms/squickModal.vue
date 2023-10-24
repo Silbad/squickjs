@@ -3,10 +3,7 @@
         :content-class="`flex flex-col ${TwdWidth} max-w-full shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 ${TwdRounded} relative`"
         :content-transition="`vfm-${transitionContent}`" :overlay-transition="`vfm-${transitionOverlay}`"
         :contentStyle="`${responsiveWidth !== null ? `width: ${responsiveWidth}px;` : ``}`" v-model="modelValue"
-        :clickToClose="false" :hideOverlay="hideOverlay" :lockScroll="lockScroll" :background="InteractionOverlay" :focusTrap="{
-            allowOutsideClick: true,
-            returnFocusOnDeactivate: false
-        }">
+        :clickToClose="false" :hideOverlay="hideOverlay" :lockScroll="lockScroll" :background="interactionOverlay" :focusTrap="focusTrap">
         <button class="absolute right-2 top-1" type="button" @click="closeModal" v-if="!hideCloseButton">
             <svg class="transition inline stroke-black dark:stroke-white hover:stroke-red-500" width="24px" height="24px"
                 stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,13 +82,17 @@ const props = defineProps({
         type: Boolean,
         default: true
     },
-    InteractionOverlay: {
+    interactionOverlay: {
         type: String,
         default: "non-interactive",
         validator: (value) => {
             return ['non-interactive', 'interactive'].includes(value)
         }
     },
+    focusTrap: {
+        type: [ Boolean, Object ],
+        default: () => ({ allowOutsideClick: true })
+    }
 })
 
 const modelValue = defineModel('modelValue', {
