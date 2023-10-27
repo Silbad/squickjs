@@ -1,25 +1,6 @@
 <template>
-    <div :class="`relative inline-flex ${TwdWidth}`">
-        <input :id="uniqueId" :name="name" :title="title" :type="mode" :class="`
-            transition
-            w-full
-            block
-            px-2.5
-            py-1.5
-            text-sm
-            shadow-sm
-            border
-            border-gray-300
-            focus:ring-4
-            focus:ring-${TwdColor}-500/20
-            focus:border-${TwdColor}-400
-            read-only:cursor-not-allowed
-            read-only:opacity-75
-            disabled:cursor-not-allowed
-            disabled:opacity-75
-            disabled:bg-gray-100
-            placeholder:text-gray-300
-            ${TwdRounded} ${showPassword && password ? 'pr-12' : ''}`" :disabled="disabled" :required="required"
+    <div :class="containerClass">
+        <input :id="uniqueId" :name="name" :title="title" :type="mode" :class="`${inputClass} ${showPassword && password ? 'pr-12' : ''}`" :disabled="disabled" :required="required"
             :readonly="readonly" :placeholder="placeholder" v-model.trim="modelValue"
         />
         <div class="px-2.5 w-12 text-sm absolute inset-y-0 right-0 flex justify-center items-center"
@@ -87,18 +68,14 @@ const props = defineProps({
         type: Boolean,
         default: false
     },
-    TwdColor: {
+    containerClass: {
         type: String,
-        default: 'indigo'
+        default: 'relative inline-flex w-auto',
     },
-    TwdRounded: {
+    inputClass: {
         type: String,
-        default: 'rounded'
+        default: 'w-full block px-2.5 py-1.5 text-sm shadow-sm border border-gray-300 focus:ring-4 focus:ring-indigo-500/20 focus:border-indigo-400 read-only:cursor-not-allowed read-only:opacity-75 disabled:cursor-not-allowed disabled:opacity-75 disabled:bg-gray-100 placeholder:text-gray-300 rounded transition',
     },
-    TwdWidth: {
-        type: String,
-        default: 'w-auto'
-    }
 })
 
 const modelValue = defineModel('modelValue', { local: true });

@@ -13,11 +13,6 @@ export const base = {
         },
         template: '<SquickInput v-bind="args" />',
     }),
-    argTypes: {
-        TwdColor: {
-            control: 'text',
-        },
-    },
 };
 
 export const password = {
@@ -31,10 +26,5 @@ export const password = {
     args: {
         password: true,
         showPassword: true
-    },
-    argTypes: {
-        TwdColor: {
-            control: 'text',
-        },
     },
 };
