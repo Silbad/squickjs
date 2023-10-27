@@ -14,6 +14,6 @@ export const base = {
         template: '<SquickBreakpoint v-bind="args" />',
     }),
     args: {
-        posY: 'top'
+        containerClass: 'select-none absolute right-4 top-4 opacity-90 text-center text-xs'
     }
 };

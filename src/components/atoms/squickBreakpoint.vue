@@ -1,22 +1,27 @@
 <template>
-    <div
-        :class="`select-none absolute ${posX}-${space} ${posY}-${space} text-white opacity-90 text-center ${TwdRounded} shadow shadow-black`">
-        <div :class="`bg-amber-600 w-10 sm:hidden flex justify-center items-center ${TwdRounded}`">
+    <div :class="containerClass">
+        <div
+            :class="`border border-amber-500 bg-amber-100 text-amber-800 ring-2 ring-amber-100 w-10 py-1 sm:hidden flex justify-center items-center rounded`">
             xs
         </div>
-        <div :class="`bg-lime-600 w-10 hidden sm:flex md:hidden sm:justify-center sm:items-center ${TwdRounded}`">
+        <div
+            :class="`border border-lime-500 bg-lime-100 text-lime-800 ring-2 ring-lime-100 w-10 py-1 hidden sm:flex md:hidden sm:justify-center sm:items-center rounded`">
             sm
         </div>
-        <div :class="`bg-emerald-600 w-10 hidden md:flex lg:hidden md:justify-center md:items-center ${TwdRounded}`">
+        <div
+            :class="`border border-emerald-500 bg-emerald-100 text-emerald-800 ring-2 ring-emerald-100 w-10 py-1 hidden md:flex lg:hidden md:justify-center md:items-center rounded`">
             md
         </div>
-        <div :class="`bg-cyan-600 w-10 hidden lg:flex xl:hidden lg:justify-center lg:items-center ${TwdRounded}`">
+        <div
+            :class="`border border-cyan-500 bg-cyan-100 text-cyan-800 ring-2 ring-cyan-100 w-10 py-1 hidden lg:flex xl:hidden lg:justify-center lg:items-center rounded`">
             lg
         </div>
-        <div :class="`bg-blue-600 w-10 hidden xl:flex 2xl:hidden xl:justify-center xl:items-center ${TwdRounded}`">
+        <div
+            :class="`border border-blue-500 bg-blue-100 text-blue-800 ring-2 ring-blue-100 w-10 py-1 hidden xl:flex 2xl:hidden xl:justify-center xl:items-center rounded`">
             xl
         </div>
-        <div :class="`bg-violet-600 w-10 hidden 2xl:flex 2xl:justify-center 2xl:items-center ${TwdRounded}`">
+        <div
+            :class="`border border-violet-500 bg-violet-100 text-violet-800 ring-2 ring-violet-100 py-1 hidden 2xl:flex 2xl:justify-center 2xl:items-center rounded`">
             2xl
         </div>
     </div>
@@ -24,27 +29,9 @@
 
 <script setup>
 const props = defineProps({
-    space: {
-        type: Number,
-        default: 4,
-    },
-    posX: {
+    containerClass: {
         type: String,
-        default: "right",
-        validator: (value) => {
-            return ['left', 'right'].includes(value)
-        }
-    },
-    posY: {
-        type: String,
-        default: "bottom",
-        validator: (value) => {
-            return ['top', 'bottom'].includes(value)
-        }
-    },
-    TwdRounded: {
-        type: String,
-        default: 'rounded'
-    },
+        default: 'select-none absolute right-4 bottom-4 opacity-90 text-center text-xs',
+    }
 })
 </script>
