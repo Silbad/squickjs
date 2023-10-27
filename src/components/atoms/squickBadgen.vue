@@ -1,13 +1,13 @@
 <template>
     <div :class="`badgen transition inline-flex flex-nowrap shadow-sm ${TwdRoundedLeft} ${TwdRoundedRight}`">
         <div
-            :class="`px-1.5 py-0.5 select-none bg-gradient-to-b from-gray-500 to-gray-700 text-white text-xs ${TwdRoundedLeft}`">
+            :class="leftContainerClass">
             <span class="flex justify-center items-center drop-shadow-[1px_1px_rgba(0,0,0,0.3)]">
                 <slot name="label-left"></slot>
             </span>
         </div>
         <div
-            :class="`px-1.5 py-0.5 select-none bg-gradient-to-b from-${TwdColor}-300 to-${TwdColor}-500 text-white text-xs ${TwdRoundedRight}`">
+            :class="rightContainerClass">
             <span class="flex justify-center items-center drop-shadow-[1px_1px_rgba(0,0,0,0.3)]">
                 <slot name="label-right"></slot>
             </span>
@@ -23,18 +23,14 @@ const props = defineProps({
         type: String,
         default: null,
     },
-    TwdColor: {
+    leftContainerClass: {
         type: String,
-        default: 'lime'
+        default: 'px-1.5 py-0.5 select-none bg-gradient-to-b from-gray-500 to-gray-700 text-white text-xs rounded-l',
     },
-    TwdRoundedLeft: {
+    rightContainerClass: {
         type: String,
-        default: 'rounded-l'
-    },
-    TwdRoundedRight: {
-        type: String,
-        default: 'rounded-r'
-    },
+        default: 'px-1.5 py-0.5 select-none bg-gradient-to-b from-lime-300 to-lime-500 text-white text-xs rounded-r',
+    }
 })
 
 const instance = getCurrentInstance();
