@@ -13,9 +13,4 @@ export const base = {
         },
         template: '<SquickTextarea v-bind="args" />',
     }),
-    argTypes: {
-        TwdColor: {
-            control: 'text',
-        },
-    },
 };

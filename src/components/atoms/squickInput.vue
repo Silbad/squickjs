@@ -70,7 +70,7 @@ const props = defineProps({
     },
     containerClass: {
         type: String,
-        default: 'relative inline-flex w-auto',
+        default: 'w-full relative inline-flex w-auto',
     },
     inputClass: {
         type: String,
