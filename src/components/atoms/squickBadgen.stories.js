@@ -31,9 +31,4 @@ export const icon = {
     args: {
         rightContainerClass: 'px-1.5 py-0.5 select-none bg-gradient-to-b from-sky-300 to-sky-500 text-white text-xs rounded-r'
     },
-    argTypes: {
-        TwdColor: {
-            control: 'text',
-        },
-    },
 };
