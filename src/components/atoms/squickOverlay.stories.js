@@ -17,11 +17,6 @@ export const base = {
         },
         template: '<SquickOverlay v-bind="args"><div class="p-4 w-52 flex justify-center items-center bg-white rounded shadow-sm">Amet sadipscing praesent. Sit lorem lobortis rebum vel erat et diam velit dolor dolor euismod dolore takimata.</div></SquickOverlay><br /><br /><SquickButton @click="open()">Toggle overlay</SquickButton>',
     }),
-    argTypes: {
-        TwdColor: {
-            control: 'text',
-        },
-    },
 };
 
 export const button = {
@@ -35,9 +30,4 @@ export const button = {
         },
         template: '<SquickOverlay v-bind="args"><SquickButton @click="open()">Show overlay</SquickButton></SquickOverlay>',
     }),
-    argTypes: {
-        TwdColor: {
-            control: 'text',
-        },
-    },
 };
