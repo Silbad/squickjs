@@ -1,5 +1,5 @@
 <template>
-    <div :class="`badgen transition inline-flex flex-nowrap shadow-sm ${TwdRoundedLeft} ${TwdRoundedRight}`">
+    <div :class="containerClass">
         <div
             :class="leftContainerClass">
             <span class="flex justify-center items-center drop-shadow-[1px_1px_rgba(0,0,0,0.3)]">
@@ -22,6 +22,10 @@ const props = defineProps({
     id: {
         type: String,
         default: null,
+    },
+    containerClass: {
+        type: String,
+        default: 'badgen transition inline-flex flex-nowrap shadow-sm rounded',
     },
     leftContainerClass: {
         type: String,

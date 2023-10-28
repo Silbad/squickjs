@@ -35,7 +35,7 @@ const props = defineProps({
     },
     svgClass: {
         type: String,
-        default: 'z-50 animate-spin h-5 w-5 text-neutral-500',
+        default: 'z-50 animate-spin h-5 w-5 text-gray-500',
     },
 })
 

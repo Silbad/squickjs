@@ -6,20 +6,20 @@ export default {
 };
 
 export const base = {
-    render: (args, argTypes) => ({
+    render: (args) => ({
         components: { SquickInput },
         setup() {
-            return { args, argTypes };
+            return { args };
         },
         template: '<SquickInput v-bind="args" />',
     }),
 };
 
 export const password = {
-    render: (args, argTypes) => ({
+    render: (args) => ({
         components: { SquickInput },
         setup() {
-            return { args, argTypes };
+            return { args };
         },
         template: '<SquickInput v-bind="args" />',
     }),

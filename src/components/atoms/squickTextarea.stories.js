@@ -6,10 +6,10 @@ export default {
 };
 
 export const base = {
-    render: (args, argTypes) => ({
+    render: (args) => ({
         components: { SquickTextarea },
         setup() {
-            return { args, argTypes };
+            return { args };
         },
         template: '<SquickTextarea v-bind="args" />',
     }),
