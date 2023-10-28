@@ -1,7 +1,5 @@
 <template>
-    <VueFinalModal :modalId="uniqueId" :class="`flex justify-${posX} items-${posY}`"
-        :content-class="`flex flex-col ${TwdWidth} max-w-full shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 ${TwdRounded} relative`"
-        :content-transition="`vfm-${transitionContent}`" :overlay-transition="`vfm-${transitionOverlay}`"
+    <VueFinalModal :modalId="uniqueId" :class="`flex justify-${posX} items-${posY}`" :contentClass="contentClass" :overlayClass="`${overlayClass} ${blur ? 'backdrop-blur-sm' : ''}`" :content-transition="`vfm-${transitionContent}`" :overlay-transition="`vfm-${transitionOverlay}`"
         :contentStyle="`${responsiveWidth !== null ? `width: ${responsiveWidth}px;` : ``}`" v-model="modelValue"
         :clickToClose="false" :hideOverlay="hideOverlay" :lockScroll="lockScroll" :background="interactionOverlay" :focusTrap="focusTrap">
         <button class="absolute right-2 top-1" type="button" @click="closeModal" v-if="!hideCloseButton">
@@ -40,6 +38,18 @@ const props = defineProps({
         type: String,
         default: "slide-up"
     },
+    contentClass: {
+        type: String,
+        default: "flex flex-col w-full md:w-1/2 max-w-full shadow-sm bg-white border border-gray-400 dark:bg-gray-900 dark:border-gray-700 rounded relative"
+    },
+    overlayClass: {
+        type: String,
+        default: "!bg-neutral-100/80"
+    },
+    blur: {
+        type: Boolean,
+        default: true
+    },
     posX: {
         type: String,
         default: "center",
@@ -53,18 +63,6 @@ const props = defineProps({
         validator: (value) => {
             return ['start', 'end', 'center'].includes(value)
         }
-    },
-    TwdColor: {
-        type: String,
-        default: "indigo"
-    },
-    TwdRounded: {
-        type: String,
-        default: "rounded"
-    },
-    TwdWidth: {
-        type: String,
-        default: "w-full md:w-1/2"
     },
     responsiveWidth: {
         type: String,
