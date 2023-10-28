@@ -1,8 +1,7 @@
 <template>
-    <VueFinalModal :modalId="uniqueId" :class="`flex justify-center items-center`"
-        :content-class="`flex flex-col w-64 max-w-xl mx-4 shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 ${TwdRounded}`"
-        :content-transition="`vfm-${transitionContent}`" :overlay-transition="`vfm-${transitionOverlay}`"
-        v-model="modelValue" :clickToClose="false" :focusTrap="{
+    <VueFinalModal :modalId="uniqueId" :class="`flex justify-center items-center`" :contentClass="contentClass"
+        :overlayClass="`${overlayClass} ${blur ? 'backdrop-blur-sm' : ''}`" :content-transition="`vfm-${transitionContent}`"
+        :overlay-transition="`vfm-${transitionOverlay}`" v-model="modelValue" :clickToClose="false" :focusTrap="{
             allowOutsideClick: true,
             returnFocusOnDeactivate: false
         }">
@@ -37,13 +36,17 @@ const props = defineProps({
         type: String,
         default: 'alert'
     },
-    TwdColor: {
+    contentClass: {
         type: String,
-        default: "indigo"
+        default: "flex flex-col w-64 max-w-xl mx-4 shadow-sm bg-white border border-gray-400 dark:bg-gray-900 dark:border-gray-700 rounded relative"
     },
-    TwdRounded: {
+    overlayClass: {
         type: String,
-        default: "rounded"
+        default: "!bg-neutral-100/80"
+    },
+    blur: {
+        type: Boolean,
+        default: true
     },
 })
 

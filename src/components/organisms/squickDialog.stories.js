@@ -7,19 +7,14 @@ export default {
 };
 
 export const alert = {
-    render: (args, argTypes) => ({
+    render: (args) => ({
         components: { SquickDialog, SquickButton },
         setup() {
             const open = () => {
                 args.modelValue = !args.modelValue
             };
-            return { args, argTypes, open };
+            return { args, open };
         },
         template: '<SquickButton @click="open()">Open alert</SquickButton><SquickDialog v-bind="args"><template v-slot:modal-body>Portez ce vieux whisky au juge blond qui fume.</template></SquickDialog>',
     }),
-    argTypes: {
-        TwdColor: {
-            control: 'text',
-        },
-    },
 };
