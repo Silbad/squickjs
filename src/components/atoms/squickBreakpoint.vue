@@ -21,7 +21,7 @@
             xl
         </div>
         <div
-            :class="`border border-violet-500 bg-violet-100 text-violet-800 ring-2 ring-violet-100 py-1 hidden 2xl:flex 2xl:justify-center 2xl:items-center rounded`">
+            :class="`border border-violet-500 bg-violet-100 text-violet-800 ring-2 ring-violet-100 w-10 py-1 hidden 2xl:flex 2xl:justify-center 2xl:items-center rounded`">
             2xl
         </div>
     </div>
@@ -31,7 +31,7 @@
 const props = defineProps({
     containerClass: {
         type: String,
-        default: 'select-none absolute right-4 bottom-4 opacity-90 text-center text-xs',
+        default: 'select-none fixed right-4 bottom-4 opacity-90 text-center text-xs',
     }
 })
 </script>
